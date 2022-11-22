@@ -36,6 +36,22 @@ var AreaRetangulo = function AreaRetangulo(Base, Altura) {
   } while (Verifier === true);
 };
 
+var AreaQuadrado = function AreaQuadrado(Lado) {
+  var Verifier = true;
+
+  do {
+    Lado = parseFloat(prompt("Informe o lado do quadrado"));
+
+    if (isNaN(Altura)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = Math.pow(Lado, 2);
+      alert("O quadrado de lado: ".concat(Lado, ", tem altura de: ").concat(Soma.toFixed(2)));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
+
 do {
   ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calcular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Sair"));
 
@@ -45,7 +61,15 @@ do {
     AreaTriangulo();
   } else if (ChosenOption === 2) {
     AreaRetangulo();
-  } else if (ChosenOption === 3) {} else if (ChosenOption === 4) {} else if (ChosenOption === 5) {} else if (ChosenOption === 6) {} else if (ChosenOption === 7) {
+  } else if (ChosenOption === 3) {
+    AreaQuadrado();
+  } else if (ChosenOption === 4) {
+    AreaCirculo();
+  } else if (ChosenOption === 5) {
+    AreaTrapezio();
+  } else if (ChosenOption === 6) {
+    AreaLosango();
+  } else if (ChosenOption === 7) {
     alert("Encerando...");
   }
 } while (ChosenOption !== 7);
