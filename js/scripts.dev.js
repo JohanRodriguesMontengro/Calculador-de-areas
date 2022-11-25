@@ -101,8 +101,10 @@ var AreaLosango = function AreaLosango(DiagonalMaior, DiagonalMenor) {
   } while (Verifier === true);
 };
 
+var CalcularPerimetro = function CalcularPerimetro() {};
+
 do {
-  ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calcular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Sair"));
+  ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calc ular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Sair"));
 
   switch (ChosenOption) {
     case isNaN(ChosenOption) || ChosenOption >= 8 || ChosenOption <= 0:
@@ -134,6 +136,10 @@ do {
       break;
 
     case 7:
+      CalcularPerimetro();
+      break;
+
+    case 8:
       alert("Encerando...");
       break;
 
@@ -141,4 +147,4 @@ do {
       alert("Um erro ocorreu :(");
       break;
   }
-} while (ChosenOption !== 7);
+} while (ChosenOption !== 8);

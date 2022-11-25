@@ -100,13 +100,15 @@ const AreaLosango = function (DiagonalMaior, DiagonalMenor) {
     }
   } while (Verifier === true);
 };
+
+const CalcularPerimetro = function () {};
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
   1- Calcular a área do triângulo
   2- Calcular a área do retângulo
   3- Calcular a área do quadrado
-  4- Calcular a área do círculo
+  4- Calc ular a área do círculo
   5- Calcular a área do trapézio
   6- Calcular a área do losango
   7- Sair`)
@@ -135,10 +137,13 @@ do {
       AreaTrapezio();
       break;
     case 7:
+      CalcularPerimetro();
+      break;
+    case 8:
       alert(`Encerando...`);
       break;
     default:
       alert(`Um erro ocorreu :(`);
       break;
   }
-} while (ChosenOption !== 7);
+} while (ChosenOption !== 8);
