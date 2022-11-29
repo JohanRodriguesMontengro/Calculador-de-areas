@@ -117,52 +117,54 @@ const PerimetroTriangulo = function (Lado1, Lado2, Lado3) {
   } while (Verifier === true);
 };
 const PerimetroRetangulo = function (Base, Altura) {
-  let Verifier = true
+  let Verifier = true;
   do {
     Base = parseFloat(prompt(`Informe a base do retângulo`));
     Altura = parseFloat(prompt(`Informe a altura do retângulo`));
 
     if (isNaN(Base) || isNaN(Altura)) {
       alert(`Digite somente números`);
-    }
-    else {
-      let Soma = 2 * (Base + Altura)
+    } else {
+      let Soma = 2 * (Base + Altura);
       alert(`O perímetro do triângulo é de: ${Soma}`);
-      return Verifier = false;  
+      return (Verifier = false);
     }
-  }while(Verifier === true)
-}
+  } while (Verifier === true);
+};
 const PerimetroQuadrado = function (Lado) {
-  let Verifier = true
+  let Verifier = true;
   do {
-    Lado = parseFloat(prompt(`Informe o lado do quadrado`))
+    Lado = parseFloat(prompt(`Informe o lado do quadrado`));
 
     if (isNaN(Lado)) {
-      alert(`Digite somente números`)
+      alert(`Digite somente números`);
+    } else {
+      let Soma = Lado * 4;
+      alert(`O perímetro do quadrado é de: ${Soma}`);
+      return (Verifier = false);
     }
-    else {
-      let Soma = Lado * 4
-      alert(`O perímetro do quadrado é de: ${Soma}`)
-      return Verifier = false
-    }
-  } while(Verifier === true)
-}
+  } while (Verifier === true);
+};
 const PerimetroCirculo = function (Raio) {
-  let Verifier = true
+  let Verifier = true;
   do {
-    Raio = parseFloat(prompt(`Informe o raio do círculo`))
+    Raio = parseFloat(prompt(`Informe o raio do círculo`));
 
     if (isNaN(Raio)) {
-      alert(`Digite somente números`)
+      alert(`Digite somente números`);
+    } else {
+      let Soma = 2 * 3.14 * Raio;
+      alert(`O perímetro do círculo é de: ${Soma}`);
+      return (Verifier = false);
     }
-    else {
-      let Soma = 2 * 3.14 * Raio
-      alert(`O perímetro do círculo é de: ${Soma}`)
-      return Verifier = false
-    }
-  } while(Verifier === true)
-}
-const PerimetroTrapezio = function (TopoDoTrapézio, BaseDoTrapézio, InclinaçãoEsquerdaDoTrapézio, InclinaçãoDireitaDoTrapézio) {}
+  } while (Verifier === true);
+};
+const PerimetroTrapezio = function (
+  TopoDoTrapézio,
+  BaseDoTrapézio,
+  InclinaçãoEsquerdaDoTrapézio,
+  InclinaçãoDireitaDoTrapézio
+) {};
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
