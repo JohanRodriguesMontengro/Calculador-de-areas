@@ -101,14 +101,30 @@ var AreaLosango = function AreaLosango(DiagonalMaior, DiagonalMenor) {
   } while (Verifier === true);
 };
 
-var CalcularPerimetro = function CalcularPerimetro() {};
+var PerimetroTriangulo = function PerimetroTriangulo(a, b, c) {
+  var Verifier = true;
+
+  do {
+    a = parseFloat(prompt("Informe o tamanho do primeiro lado"));
+    b = parseFloat(prompt("Informe o tamanho do segundo lado"));
+    c = parseFloat(prompt("Informe o tamanho do terceiro lado"));
+
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = a + b + c;
+      alert("O per\xEDmetro do tri\xE2ngulo \xE9 de: ".concat(Soma));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
 
 do {
-  ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calc ular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Sair"));
+  ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calc ular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Calcular Perimetro\n  8- Sair"));
 
   switch (ChosenOption) {
-    case isNaN(ChosenOption) || ChosenOption >= 8 || ChosenOption <= 0:
-      alert("Digite somente n\xFAmeros entre 1 a 7");
+    case isNaN(ChosenOption) || ChosenOption >= 9 || ChosenOption <= 0:
+      alert("Digite somente n\xFAmeros entre 1 a 8");
       break;
 
     case 1:
@@ -136,7 +152,14 @@ do {
       break;
 
     case 7:
-      CalcularPerimetro();
+      do {
+        var _CalcularPerimetro = parseInt(prompt("\n        1- Calcular Perimetro do Tri\xE2ngulo\n        2- Calcular Perimetro do Ret\xE2ngulo\n        3- Calcular Perimetro do Quadrado\n        4- Calcular Perimetro do C\xEDrculo\n        5- Calcular Perimetro do Trap\xE9zio\n        6- Calcular Perimetro do Losango\n        7- Sair "));
+
+        if (isNaN(_CalcularPerimetro) || _CalcularPerimetro >= 8 || _CalcularPerimetro <= 0) {
+          alert("Digite somente n\xFAmeros entre 1 a 7");
+        } else if (_CalcularPerimetro === 1) {}
+      } while (CalcularPerimetro !== 7);
+
       break;
 
     case 8:

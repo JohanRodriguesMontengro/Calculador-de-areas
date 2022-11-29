@@ -100,8 +100,25 @@ const AreaLosango = function (DiagonalMaior, DiagonalMenor) {
     }
   } while (Verifier === true);
 };
+const PerimetroTriangulo = function (a, b, c) {
+  let Verifier = true
+  do {
+    a = parseFloat(prompt(`Informe o tamanho do primeiro lado`))
+    b = parseFloat(prompt(`Informe o tamanho do segundo lado`))
+    c = parseFloat(prompt(`Informe o tamanho do terceiro lado`))
 
-const CalcularPerimetro = function () {};
+    if (isNaN(a) || isNaN(b) || isNaN(c)) { 
+      alert(`Digite somente números`)
+    }
+    else {
+      let Soma = a + b + c
+
+      alert(`O perímetro do triângulo é de: ${Soma}`)
+      return Verifier = false
+    }
+  }while(Verifier === true)
+}
+
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
@@ -111,12 +128,13 @@ do {
   4- Calc ular a área do círculo
   5- Calcular a área do trapézio
   6- Calcular a área do losango
-  7- Sair`)
+  7- Calcular Perimetro
+  8- Sair`)
   );
 
   switch (ChosenOption) {
-    case isNaN(ChosenOption) || ChosenOption >= 8 || ChosenOption <= 0:
-      alert(`Digite somente números entre 1 a 7`);
+    case isNaN(ChosenOption) || ChosenOption >= 9 || ChosenOption <= 0:
+      alert(`Digite somente números entre 1 a 8`);
       break;
     case 1:
       AreaTriangulo();
@@ -137,7 +155,23 @@ do {
       AreaTrapezio();
       break;
     case 7:
-      CalcularPerimetro();
+      do {
+        let CalcularPerimetro = parseInt(prompt(`
+        1- Calcular Perimetro do Triângulo
+        2- Calcular Perimetro do Retângulo
+        3- Calcular Perimetro do Quadrado
+        4- Calcular Perimetro do Círculo
+        5- Calcular Perimetro do Trapézio
+        6- Calcular Perimetro do Losango
+        7- Sair `))
+
+        if (isNaN(CalcularPerimetro) || CalcularPerimetro >= 8 || CalcularPerimetro <= 0) {
+          alert(`Digite somente números entre 1 a 7`);
+        }
+        else if (CalcularPerimetro === 1) {
+          
+        }
+      } while(CalcularPerimetro !== 7)
       break;
     case 8:
       alert(`Encerando...`);
