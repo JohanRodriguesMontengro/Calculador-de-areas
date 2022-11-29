@@ -147,6 +147,21 @@ const PerimetroQuadrado = function (Lado) {
     }
   } while(Verifier === true)
 }
+const PerimetroCirculo = function (Raio) {
+  let Verifier = true
+  do {
+    Raio = parseFloat(prompt(`Informe o raio do círculo`))
+
+    if (isNaN(Raio)) {
+      alert(`Digite somente números`)
+    }
+    else {
+      let Soma = 2 * 3.14 * Raio
+      alert(`O perímetro do círculo é de: ${Soma}`)
+      return Verifier = false
+    }
+  }
+}
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo

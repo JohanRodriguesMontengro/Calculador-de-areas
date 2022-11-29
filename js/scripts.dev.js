@@ -152,6 +152,11 @@ var PerimetroQuadrado = function PerimetroQuadrado(Lado) {
   } while (Verifier === true);
 };
 
+var PerimetroCirculo = function PerimetroCirculo(Raio) {
+  var Verifier = true;
+  d;
+};
+
 do {
   ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calc ular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Calcular Perimetro\n  8- Sair"));
 
