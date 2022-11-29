@@ -160,8 +160,9 @@ const PerimetroCirculo = function (Raio) {
       alert(`O perímetro do círculo é de: ${Soma}`)
       return Verifier = false
     }
-  }
+  } while(Verifier === true)
 }
+const PerimetroTrapezio = function (TopoDoTrapézio, BaseDoTrapézio, InclinaçãoEsquerdaDoTrapézio, InclinaçãoDireitaDoTrapézio) {}
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
