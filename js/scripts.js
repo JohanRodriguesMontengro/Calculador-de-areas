@@ -116,6 +116,22 @@ const PerimetroTriangulo = function (Lado1, Lado2, Lado3) {
     }
   } while (Verifier === true);
 };
+const PerimetroRetangulo = function (Base, Altura) {
+  let Verifier = true
+  do {
+    Base = parseFloat(prompt(`Informe a base do retângulo`));
+    Altura = parseFloat(prompt(`Informe a altura do retângulo`));
+
+    if (isNaN(Base) || isNaN(Altura)) {
+      alert(`Digite somente números`);
+    }
+    else {
+      let Soma = 2 * (Base + Altura)
+      alert(`O perímetro do triângulo é de: ${Soma}`);
+      return Verifier = false;  
+    }
+  }while(Verifier === true)
+}
 const PerimetroQuadrado = function (Lado) {
   let Verifier = true
   do {

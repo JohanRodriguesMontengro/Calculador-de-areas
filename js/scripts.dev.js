@@ -119,6 +119,23 @@ var PerimetroTriangulo = function PerimetroTriangulo(Lado1, Lado2, Lado3) {
   } while (Verifier === true);
 };
 
+var PerimetroRetangulo = function PerimetroRetangulo(Base, Altura) {
+  var Verifier = true;
+
+  do {
+    Base = parseFloat(prompt("Informe a base do ret\xE2ngulo"));
+    Altura = parseFloat(prompt("Informe a altura do ret\xE2ngulo"));
+
+    if (isNaN(Base) || isNaN(Altura)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = 2 * (Base + Altura);
+      alert("O per\xEDmetro do tri\xE2ngulo \xE9 de: ".concat(Soma));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
+
 var PerimetroQuadrado = function PerimetroQuadrado(Lado) {
   var Verifier = true;
 
