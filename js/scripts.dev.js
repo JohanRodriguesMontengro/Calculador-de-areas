@@ -101,19 +101,35 @@ var AreaLosango = function AreaLosango(DiagonalMaior, DiagonalMenor) {
   } while (Verifier === true);
 };
 
-var PerimetroTriangulo = function PerimetroTriangulo(a, b, c) {
+var PerimetroTriangulo = function PerimetroTriangulo(Lado1, Lado2, Lado3) {
   var Verifier = true;
 
   do {
-    a = parseFloat(prompt("Informe o tamanho do primeiro lado"));
-    b = parseFloat(prompt("Informe o tamanho do segundo lado"));
-    c = parseFloat(prompt("Informe o tamanho do terceiro lado"));
+    Lado1 = parseFloat(prompt("Informe o tamanho do primeiro lado"));
+    Lado2 = parseFloat(prompt("Informe o tamanho do segundo lado"));
+    Lado3 = parseFloat(prompt("Informe o tamanho do terceiro lado"));
 
-    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    if (isNaN(Lado1) || isNaN(Lado2) || isNaN(Lado3)) {
       alert("Digite somente n\xFAmeros");
     } else {
-      var Soma = a + b + c;
+      var Soma = Lado1 + Lado2 + Lado3;
       alert("O per\xEDmetro do tri\xE2ngulo \xE9 de: ".concat(Soma));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
+
+var PerimetroQuadrado = function PerimetroQuadrado(Lado) {
+  var Verifier = true;
+
+  do {
+    Lado = parseFloat(prompt("Informe o lado do quadrado"));
+
+    if (isNaN(Lado)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = Lado * 4;
+      alert("O per\xEDmetro do quadrado \xE9 de: ".concat(Soma));
       return Verifier = false;
     }
   } while (Verifier === true);

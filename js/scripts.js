@@ -100,25 +100,37 @@ const AreaLosango = function (DiagonalMaior, DiagonalMenor) {
     }
   } while (Verifier === true);
 };
-const PerimetroTriangulo = function (a, b, c) {
+const PerimetroTriangulo = function (Lado1, Lado2, Lado3) {
+  let Verifier = true;
+  do {
+    Lado1 = parseFloat(prompt(`Informe o tamanho do primeiro lado`));
+    Lado2 = parseFloat(prompt(`Informe o tamanho do segundo lado`));
+    Lado3 = parseFloat(prompt(`Informe o tamanho do terceiro lado`));
+
+    if (isNaN(Lado1) || isNaN(Lado2) || isNaN(Lado3)) {
+      alert(`Digite somente números`);
+    } else {
+      let Soma = Lado1 + Lado2 + Lado3;
+      alert(`O perímetro do triângulo é de: ${Soma}`);
+      return (Verifier = false);
+    }
+  } while (Verifier === true);
+};
+const PerimetroQuadrado = function (Lado) {
   let Verifier = true
   do {
-    a = parseFloat(prompt(`Informe o tamanho do primeiro lado`))
-    b = parseFloat(prompt(`Informe o tamanho do segundo lado`))
-    c = parseFloat(prompt(`Informe o tamanho do terceiro lado`))
+    Lado = parseFloat(prompt(`Informe o lado do quadrado`))
 
-    if (isNaN(a) || isNaN(b) || isNaN(c)) { 
+    if (isNaN(Lado)) {
       alert(`Digite somente números`)
     }
     else {
-      let Soma = a + b + c
-
-      alert(`O perímetro do triângulo é de: ${Soma}`)
+      let Soma = Lado * 4
+      alert(`O perímetro do quadrado é de: ${Soma}`)
       return Verifier = false
     }
-  }while(Verifier === true)
+  } while(Verifier === true)
 }
-
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
@@ -156,22 +168,26 @@ do {
       break;
     case 7:
       do {
-        let CalcularPerimetro = parseInt(prompt(`
+        let CalcularPerimetro = parseInt(
+          prompt(`
         1- Calcular Perimetro do Triângulo
         2- Calcular Perimetro do Retângulo
         3- Calcular Perimetro do Quadrado
         4- Calcular Perimetro do Círculo
         5- Calcular Perimetro do Trapézio
         6- Calcular Perimetro do Losango
-        7- Sair `))
+        7- Sair `)
+        );
 
-        if (isNaN(CalcularPerimetro) || CalcularPerimetro >= 8 || CalcularPerimetro <= 0) {
+        if (
+          isNaN(CalcularPerimetro) ||
+          CalcularPerimetro >= 8 ||
+          CalcularPerimetro <= 0
+        ) {
           alert(`Digite somente números entre 1 a 7`);
+        } else if (CalcularPerimetro === 1) {
         }
-        else if (CalcularPerimetro === 1) {
-          
-        }
-      } while(CalcularPerimetro !== 7)
+      } while (CalcularPerimetro !== 7);
       break;
     case 8:
       alert(`Encerando...`);
