@@ -168,7 +168,40 @@ var PerimetroCirculo = function PerimetroCirculo(Raio) {
   } while (Verifier === true);
 };
 
-var PerimetroTrapezio = function PerimetroTrapezio(TopoDoTrapézio, BaseDoTrapézio, InclinaçãoEsquerdaDoTrapézio, InclinaçãoDireitaDoTrapézio) {};
+var PerimetroTrapezio = function PerimetroTrapezio(TopoDoTrapézio, BaseDoTrapézio, InclinaçãoEsquerdaDoTrapézio, InclinaçãoDireitaDoTrapézio) {
+  var Verifier = true;
+
+  do {
+    TopoDoTrapézio = parseFloat(prompt("Informe o topo do trap\xE9zio"));
+    BaseDoTrapézio = parseFloat(prompt("Informe a base do trap\xE9zio"));
+    InclinaçãoEsquerdaDoTrapézio = parseFloat(prompt("Informe a inclina\xE7\xE3o do lado esquerdo do trap\xE9zio"));
+    InclinaçãoDireitaDoTrapézio = parseFloat(prompt("Informe a inclina\xE7\xE3o do lado direito do trap\xE9zio"));
+
+    if (isNaN(TopoDoTrapézio) || isNaN(BaseDoTrapézio) || isNaN(InclinaçãoEsquerdaDoTrapézio) || isNaN(InclinaçãoDireitaDoTrapézio)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = TopoDoTrapézio + BaseDoTrapézio + InclinaçãoEsquerdaDoTrapézio + InclinaçãoDireitaDoTrapézio;
+      alert("O per\xEDmetro do trap\xE9zio \xE9 de: ".concat(Soma));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
+
+var PerimetroLosango = function PerimetroLosango(Lado) {
+  var Verifier = true;
+
+  do {
+    Lado = parseFloat(prompt("Informe o lado do losango"));
+
+    if (isNaN(Lado)) {
+      alert("Digite somente n\xFAmeros");
+    } else {
+      var Soma = Lado * 4;
+      alert("O per\xEDmetro do losango \xE9 de: ".concat(Soma));
+      return Verifier = false;
+    }
+  } while (Verifier === true);
+};
 
 do {
   ChosenOption = parseInt(prompt("Escolha uma op\xE7\xE3o abaixo\n  1- Calcular a \xE1rea do tri\xE2ngulo\n  2- Calcular a \xE1rea do ret\xE2ngulo\n  3- Calcular a \xE1rea do quadrado\n  4- Calc ular a \xE1rea do c\xEDrculo\n  5- Calcular a \xE1rea do trap\xE9zio\n  6- Calcular a \xE1rea do losango\n  7- Calcular Perimetro\n  8- Sair"));
@@ -208,7 +241,19 @@ do {
 
         if (isNaN(_CalcularPerimetro) || _CalcularPerimetro >= 8 || _CalcularPerimetro <= 0) {
           alert("Digite somente n\xFAmeros entre 1 a 7");
-        } else if (_CalcularPerimetro === 1) {}
+        } else if (_CalcularPerimetro === 1) {
+          PerimetroTriangulo();
+        } else if (_CalcularPerimetro === 2) {
+          PerimetroRetangulo();
+        } else if (_CalcularPerimetro === 3) {
+          PerimetroQuadrado();
+        } else if (_CalcularPerimetro === 4) {
+          PerimetroCirculo();
+        } else if (_CalcularPerimetro === 5) {
+          PerimetroTrapezio();
+        } else if (_CalcularPerimetro === 6) {
+          PerimetroLosango();
+        }
       } while (CalcularPerimetro !== 7);
 
       break;

@@ -164,7 +164,50 @@ const PerimetroTrapezio = function (
   BaseDoTrapézio,
   InclinaçãoEsquerdaDoTrapézio,
   InclinaçãoDireitaDoTrapézio
-) {};
+) {
+  let Verifier = true;
+  do {
+    TopoDoTrapézio = parseFloat(prompt(`Informe o topo do trapézio`));
+    BaseDoTrapézio = parseFloat(prompt(`Informe a base do trapézio`));
+    InclinaçãoEsquerdaDoTrapézio = parseFloat(
+      prompt(`Informe a inclinação do lado esquerdo do trapézio`)
+    );
+    InclinaçãoDireitaDoTrapézio = parseFloat(
+      prompt(`Informe a inclinação do lado direito do trapézio`)
+    );
+
+    if (
+      isNaN(TopoDoTrapézio) ||
+      isNaN(BaseDoTrapézio) ||
+      isNaN(InclinaçãoEsquerdaDoTrapézio) ||
+      isNaN(InclinaçãoDireitaDoTrapézio)
+    ) {
+      alert(`Digite somente números`);
+    } else {
+      let Soma =
+        TopoDoTrapézio +
+        BaseDoTrapézio +
+        InclinaçãoEsquerdaDoTrapézio +
+        InclinaçãoDireitaDoTrapézio;
+      alert(`O perímetro do trapézio é de: ${Soma}`);
+      return (Verifier = false);
+    }
+  } while (Verifier === true);
+};
+const PerimetroLosango = function (Lado) {
+  let Verifier = true;
+  do {
+    Lado = parseFloat(prompt(`Informe o lado do losango`));
+
+    if (isNaN(Lado)) {
+      alert(`Digite somente números`);
+    } else {
+      let Soma = Lado * 4;
+      alert(`O perímetro do losango é de: ${Soma}`);
+      return (Verifier = false);
+    }
+  } while (Verifier === true);
+};
 do {
   ChosenOption = parseInt(
     prompt(`Escolha uma opção abaixo
@@ -220,6 +263,17 @@ do {
         ) {
           alert(`Digite somente números entre 1 a 7`);
         } else if (CalcularPerimetro === 1) {
+          PerimetroTriangulo();
+        } else if (CalcularPerimetro === 2) {
+          PerimetroRetangulo();
+        } else if (CalcularPerimetro === 3) {
+          PerimetroQuadrado();
+        } else if (CalcularPerimetro === 4) {
+          PerimetroCirculo();
+        } else if (CalcularPerimetro === 5) {
+          PerimetroTrapezio();
+        } else if (CalcularPerimetro === 6) {
+          PerimetroLosango();
         }
       } while (CalcularPerimetro !== 7);
       break;
